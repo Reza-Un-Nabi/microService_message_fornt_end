@@ -1,0 +1,15 @@
+<div class="col-md-5">
+    <h2 class="text-center">Greeting</h2>
+    <form [formGroup]="productForm">
+      <div class="form-group">
+        <input type="text" formControlName="name"  class="form-control" placeholder="Enter Greeting"
+        [ngClass]="{ 'is-invalid': submitted &amp;&amp; productForm.controls.name.errors }" />
+      <div *ngIf="submitted &amp;&amp; productForm.controls.name.errors" class="text-danger">
+        <div *ngIf="productForm.controls.name.errors.required">Greeting Required</div>
+      </div>
+       
+      </div>
+      
+      <button class="btn btn-success" (click)="getGreeting()">Send</button>
+    </form>
+  </div>

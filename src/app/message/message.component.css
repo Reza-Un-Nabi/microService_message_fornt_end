@@ -1,0 +1,7 @@
+.bounce {
+    position: fixed;
+    top: 70px;
+    left: 400px;
+    z-index: 2000;
+    transition: all;
+    }
